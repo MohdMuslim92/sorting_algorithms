@@ -13,7 +13,7 @@ void merge_sort(int *array, size_t size)
 	int *left = array, *right = array + mid;
 	int *merged = malloc(size * sizeof(int));
 
-	if (size < 2)
+	if (array == NULL || size < 2)
 		return;
 	merge_sort(left, left_size);
 	merge_sort(right, right_size);
